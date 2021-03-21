@@ -373,11 +373,17 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
+  color: #333333;
 }
 
 @charset "UTF-8";
 
 /************ шапка сайта ***************/
+
+.page-header {
+  position: relative;
+  z-index: 5;
+}
 
 .page-header__top {
   position: relative;
