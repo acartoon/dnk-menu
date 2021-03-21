@@ -1,0 +1,473 @@
+@charset "UTF-8";
+
+/************ базовые стили ***************/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+@media (max-width: 1023px) {
+  .overflow-mob {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  clip: rect(0 0 0 0) !important;
+}
+
+.container {
+  max-width: 1150px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media (min-width: 480px) {
+  .container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+/************ шрифты ***************/
+
+@font-face {
+  font-weight: 200;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  src: url("..//../fonts/helveticaneuecyr-thin-webfont.woff2") format("woff2"), url("..//../fonts/helveticaneuecyr-thin-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  src: url("..//../fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"), url("..//../fonts/HelveticaNeueCyr-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("..//../fonts/opensans-bold-webfont.woff2") format("woff2"), url("..//../fonts/opensans-bold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("..//../fonts/opensans-semibold-webfont.woff2") format("woff2"), url("..//../fonts/opensans-semibold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("..//../fonts/opensans-regular-webfont.woff2") format("woff2"), url("..//../fonts/opensans-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("..//../fonts/opensans-light-webfont.woff2") format("woff2"), url("..//../fonts/opensans-light-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: "Roboto";
+  font-style: normal;
+  src: url("..//../fonts/roboto-light.woff2") format("woff2"), url("..//../fonts/roboto-light.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Roboto";
+  font-style: normal;
+  src: url("..//../fonts/roboto-medium.woff2") format("woff2"), url("..//../fonts/roboto-medium.woff") format("woff");
+}
+
+/************ стили сетки ***************/
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
+
+@media (min-width: 1024px) {
+  .order-xl-first {
+    order: -1;
+  }
+}
+
+.col-12 {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 640px) {
+  .col-ml-6 {
+    width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .col-lg-3 {
+    width: 33.3333%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.d-ex-block {
+  display: block;
+}
+
+.d-ex-none {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .d-sm-block {
+    display: block;
+  }
+}
+
+@media (min-width: 480px) {
+  .d-sm-none {
+    display: none;
+  }
+}
+
+@media (min-width: 560px) {
+  .d-m-block {
+    display: block;
+  }
+}
+
+@media (min-width: 560px) {
+  .d-m-none {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .d-ml-block {
+    display: block;
+  }
+}
+
+@media (min-width: 640px) {
+  .d-ml-none {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .d-lm-block {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .d-lm-none {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .d-l-block {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .d-l-none {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .d-xl-block {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .d-xl-none {
+    display: none;
+  }
+}
+
+/************ типографика ***************/
+
+/************** page-footer *******************/
+
+.header-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-top__item {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.header-top__item:last-child {
+  width: 60%;
+  align-items: flex-end;
+}
+
+.header-top__submenu {
+  margin-bottom: 30px !important;
+}
+
+.header-top__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-top__search {
+  display: flex;
+  justify-content: flex-end;
+  width: 300px;
+  margin-right: 25px;
+}
+
+/************ main-menu ***************/
+
+.main-nav {
+  background: #e4e2e2;
+  position: relative;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-menu__dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: white;
+  box-shadow: 3px 2px 6px 0px #bfbcbc;
+  transform: translateY(-100%);
+  transition: all 300ms ease-in;
+  z-index: -2;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.main-menu.open .main-menu__dropdown {
+  transform: translateY(0);
+  transition: all 300ms ease-in;
+  z-index: -2;
+  opacity: 1;
+  overflow: visible;
+}
+
+.main-menu__item:hover .main-menu__dropdown {
+  z-index: -1;
+}
+
+.main-menu__dropdown-in {
+  opacity: 0;
+  transition: opacity 200ms ease-in 0ms;
+}
+
+.main-menu__item:hover > .main-menu__dropdown .main-menu__dropdown-in {
+  opacity: 1;
+  transition: opacity 200ms ease-out 350ms;
+  z-index: -1;
+}
+
+.main-menu__item {
+  display: block;
+  padding: 20px 10px;
+}
+
+.main-menu__link {
+  color: #333333;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/************ menu-dropdown ***************/
+
+.menu-dropdown {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding: 45px 0;
+  -moz-column-count: 2;
+  column-count: 2;
+  -moz-column-gap: 4%;
+  column-gap: 4%;
+}
+
+.menu-dropdown:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: calc(100% - 90px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e4e2e2;
+}
+
+.menu-dropdown__link {
+  display: block;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  line-height: 22px;
+  font-weight: 400;
+  padding: 8px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@charset "UTF-8";
+
+/************ шапка сайта ***************/
+
+.page-header__top {
+  position: relative;
+  background: #fff;
+  padding-top: 20px;
+  z-index: 3;
+}
+
+.search {
+  width: 100%;
+  border: 1px solid #b3b2b2;
+  padding-right: 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search input {
+  padding: 0;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.search__button {
+  padding: 0;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  background: url("..//i/icons/loupe.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+}
+
+/************ submenu ***************/
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.submenu__item {
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.submenu__link {
+  color: #333333;
+  text-decoration: none;
+  letter-spacing: 0.15px;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/************ main-menu ***************/
+
+.user-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-menu__item {
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.user-menu__link {
+  font-size: 0;
+  display: block;
+  width: 25px;
+  height: 25px;
+  color: #333333;
+  text-decoration: none;
+}
+
+.user-menu img {
+  max-width: 100%;
+  max-height: 100%;
+}

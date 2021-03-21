@@ -1,0 +1,12 @@
+mixin mainNav(menu)
+    nav.main-nav
+        .container
+            ul.main-menu
+                each val in menu
+                    li._item(class=val.dropdown ? "js-nav" : "")
+                        a(href=val.link)._link=val.title
+                        if(val.dropdown)
+                            ._dropdown(class=val.open ? 'open' : '')
+                                ._dropdown-in
+                                    .container
+                                        +menuDropdown(val.dropdown)

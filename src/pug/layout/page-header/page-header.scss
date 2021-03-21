@@ -1,0 +1,14 @@
+/************ шапка сайта ***************/
+
+@import "src/style/_";
+
+.page-header {
+
+
+    &__top {
+        position: relative;
+        background: #fff;
+        padding-top: 20px;
+        z-index: 3;
+    }
+}

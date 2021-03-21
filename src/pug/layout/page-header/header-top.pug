@@ -1,0 +1,14 @@
+mixin headerTop(submenu, userMenu)
+    .header-top
+        ._item
+            .logo
+                img(src="https://dnk-russia.com/bitrix/templates/styleshop/images/logo/logo.png" alt="Логотип ДНК")
+            p.slogan Новый формат одежды без возрастных ограничений 0+
+        ._item
+
+            +submenu(submenu)(class='header-top__submenu')
+            ._wrapper
+                ._search
+                    +search
+                ._user-menu
+                    +userMenu(userMenu)

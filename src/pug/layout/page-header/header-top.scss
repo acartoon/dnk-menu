@@ -1,0 +1,36 @@
+.header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    //border-bottom: 1px solid #333333;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+
+        &:last-child {
+            width: 60%;
+            align-items: flex-end;
+
+        }
+    }
+
+    &__submenu {
+        margin-bottom: 30px !important;
+    }
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        //flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    &__search {
+        display: flex;
+        justify-content: flex-end;
+        width: 300px;
+        margin-right: 25px;
+    }
+}

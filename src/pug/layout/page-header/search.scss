@@ -1,0 +1,33 @@
+.search {
+    width: 100%;
+    border: 1px solid #b3b2b2;
+    padding-right: 10px;
+
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+        padding: 0;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+
+    }
+
+    &__button {
+        padding: 0;
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        background: url("i/icons/loupe.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        border: none;
+    }
+}

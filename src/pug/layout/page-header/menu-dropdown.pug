@@ -1,0 +1,5 @@
+mixin menuDropdown(menu)
+    ul.menu-dropdown
+        each val in menu
+            li._item
+                a(href=val.link)._link=val.title

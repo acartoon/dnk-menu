@@ -1,0 +1,16 @@
+include data
+include user-menu
+include main-nav
+include search
+include submenu
+include header-top
+include menu-dropdown
+
+mixin pageHeader
+    header.page-header
+        ._top
+            .container
+                +headerTop(submenu, userMenu)
+        ._main-nav
+            +mainNav(mainNav)
+

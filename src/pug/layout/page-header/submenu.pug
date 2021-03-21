@@ -1,0 +1,5 @@
+mixin submenu(submenu)
+    ul.submenu&attributes(attributes)
+        each val in submenu
+            li._item
+                a(href=val.link)._link=val.title

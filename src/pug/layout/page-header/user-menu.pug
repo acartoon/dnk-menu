@@ -1,0 +1,6 @@
+mixin userMenu(userMenu)
+    ul.user-menu
+        each val in userMenu
+            li._item
+                a(href="" class=val.class title=val.title)._link=val.title
+                    img(src='i/icons/' + val.icon alt=val.title)
