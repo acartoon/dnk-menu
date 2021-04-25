@@ -14,8 +14,9 @@ module.exports = function styles() {
     .pipe(sourcemaps.init())
     .pipe(order([
         'style/*.scss',
-        'includes/partners/**/*.scss',
-        'includes/modules/**/*.scss',
+        'pug/layout/**/*.scss',
+        'pug/blocks/**/*.scss',
+        'pug/includes/**/*.scss',
     ]), { base: './src' })
     .pipe(sass({sourceMap: true})
         .on('error', notify.onError(

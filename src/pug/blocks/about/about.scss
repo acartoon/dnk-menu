@@ -1,0 +1,57 @@
+/************ шапка сайта ***************/
+@import "src/style/_";
+
+
+.about {
+    border-top: 2px solid color(goldLight);
+    padding-top: 24px;
+
+    @include desktopStyle {
+        border-top-width: 2rem;
+        padding-top: 24rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__block {
+        padding: 0 16px;
+
+        @include desktopStyle {
+            padding: 0;
+            width: 533rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        @include desktopStyle {
+            padding-top: 8rem;
+            margin-bottom: 40rem;
+        }
+
+        b {
+            color: color(goldLight);
+            font-family: "Open Sans Bold", sans-serif;
+        }
+        p {
+            margin: 0 0 32px;
+            color: color(gray1);
+            @include getFont($sansRegular, 16, false);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include desktopStyle {
+                @include getFont($sansRegular, 18, false, rem);
+                margin-bottom: 32rem;
+            }
+        }
+
+
+    }
+
+    &__title {
+
+    }
+}

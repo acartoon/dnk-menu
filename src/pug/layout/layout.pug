@@ -1,12 +1,12 @@
 include ../_
 doctype html
-html
+html(lang="ru")
     block var
-    +head()
-    body
-        +pageHeader
+    +head(pageTitle)
+    body(class=isFullHead ? 'maker' : 'main' class=isFullHead ? 'header-full' : '' class=className)
+        +pageHeader(isFullHead, pageName)
             block header
-        main.page
+        main.page(class=mainClass  class=gradient ? 'gradient' : '')
             block content
         +pageFooter
         .page__modals

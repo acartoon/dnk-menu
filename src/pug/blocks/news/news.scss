@@ -1,0 +1,66 @@
+/************ news ***************/
+@import "src/style/_";
+
+.news {
+
+
+    @include desktopStyle {
+        border-top: 1rem solid color(dark);
+    }
+
+    &__empty {
+        text-align: center;
+    }
+
+    &__img {
+        margin: 0 0 32px;
+        padding: 0 94px;
+        line-height: 0;
+
+        @include desktopStyle {
+            width: 239rem;
+            height: 220rem;
+            margin: 0 auto 32rem;
+        }
+    }
+
+    &__empty-wrap {
+        margin-top: 48px;
+        @include desktopStyle {
+            margin-top: 96rem;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 50%;
+            z-index: 1;
+        }
+    }
+
+    &__title {
+        margin: 0 0 8px;
+        @include getFont($oswaldRegular, 20, true);
+        color: color(gray1);
+
+        @include desktopStyle {
+            @include getFont($oswaldRegular, 24, true);
+        }
+    }
+
+    &__subtitle {
+        margin: 0;
+        @include getFont($sansRegular, 16, false);
+        color: color(gray1);
+
+        @include desktopStyle {
+            @include getFont($sansRegular, 18, false);
+        }
+    }
+
+    &__list {
+        margin: 0 -16px 8px;
+
+        @include desktopStyle {
+            margin: 0;
+        }
+    }
+}

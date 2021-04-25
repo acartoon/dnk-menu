@@ -1,0 +1,17 @@
+mixin newsList(newsList)
+    .news-list.js-news-slider
+        .swiper-container
+            ul.news-list__list.swiper-wrapper&attributes(attributes)
+                each val,index in newsList
+                    li.news-list__item.swiper-slide
+                        .news-list__wrap
+                            +cardNews(val, index)
+                            if(index == 0)
+                                .news-list__btn
+                                    +_defaultButton({
+                                        text: 'Читать все новости',
+                                        data_type: 'default',
+                                        theme: 'theme',
+                                        icon: false,
+                                        tag: 'a'
+                                    })

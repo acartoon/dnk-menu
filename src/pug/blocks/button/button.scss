@@ -1,0 +1,168 @@
+/************ шапка сайта ***************/
+@import "src/style/_";
+
+
+.button {
+    position: relative;
+    @include getFont($oswaldRegular, 14, true);
+    @include baseBtnStyle();
+    display: block;
+    width: 100%;
+    position: relative;
+    background: transparent;
+    color: color(gray1);
+    outline: none;
+    cursor: pointer;
+    transition: background 200ms ease-in-out, color 200ms ease-in-out;
+    text-decoration: none;
+    -webkit-appearance: none;
+    z-index: 0;
+
+    // для сафари версии
+    &:visited div{
+        border-color:#5F5E58;
+    }
+
+    &:visited span {
+        border-color:#C0A968;
+    }
+
+    &.callback {
+        path {
+            fill: #fff;
+            @include baseTransitionStyle(fill);
+        }
+
+        &:hover {
+            path {
+                fill: color(goldLight);
+            }
+        }
+    }
+
+    &__icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+
+        @include desktopStyle {
+            width: 24rem;
+            height: 24rem;
+        }
+
+    }
+
+
+    &__text {
+        margin-right: 8px;
+        .button.callback & {
+            @include desktopStyle {
+                display: none;
+            }
+        }
+    }
+
+
+    &__in {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    &:hover {
+        //background: color(darkGray);
+        color: color(goldLight);
+        transition: background 200ms ease-in-out, color 200ms ease-in-out;
+
+
+        .border__in > span {
+            width: 100%;
+            height: 100%;
+            transition: width 200ms ease-in-out, height 200ms ease-in-out;
+        }
+    }
+
+
+    @include desktopStyle {
+        @include getFont($oswaldRegular, 16, true, rem);
+    }
+
+    &__in {
+        padding: 17px;
+
+        @include desktopStyle {
+            padding: 17rem;
+        }
+
+        .button.callback & {
+            padding: 12px;
+
+            @include desktopStyle {
+                padding: 12rem;
+            }
+        }
+    }
+
+
+    &:before {
+        position: absolute;
+        content: "";
+        top: 0.5px;
+        bottom: 0.5px;
+        left: 1px;
+        right: 1px;
+        background: rgba(133, 113, 77, 0.4);
+        z-index: -1;
+        @include baseTransitionStyle(background);
+    }
+
+    &.light {
+        color: #C0A968;
+
+        &:before {
+            background: color(darkGray);
+        }
+
+        &:hover {
+            color: #fff;
+            @include baseTransitionStyle(color);
+            &:before {
+                @include baseTransitionStyle(background);
+                background: color(goldDark);
+            }
+        }
+    }
+}
+
+.button-back {
+    @include baseBtnStyle();
+    @include getFont($oswaldRegular, 16, true);
+    @include baseTransitionStyle(color);
+    color: color(goldLight);
+    display: flex;
+    outline: none;
+
+    &__icon {
+        display: block;
+        width: 16px;
+        height: 16px;
+        padding-right: 4px;
+    }
+
+    path {
+        fill: color(goldLight);
+        @include baseTransitionStyle(fill);
+    }
+
+    &:hover {
+        color: color(goldDark);
+        @include baseTransitionStyle(color);
+
+        path {
+            fill: color(goldDark);
+            @include baseTransitionStyle(fill);
+        }
+
+    }
+}

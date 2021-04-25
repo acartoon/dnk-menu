@@ -1,0 +1,26 @@
+/************ submenu ***************/
+
+@import "dnk/src../../style/_";
+
+
+.submenu {
+    @include baseListStyle;
+    display: flex;
+
+    &__item {
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    &__link {
+        color: #333333;
+        text-decoration: none;
+        letter-spacing: 0.15px;
+        font-size: 16px;
+        line-height: 22px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+}

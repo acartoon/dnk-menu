@@ -5,7 +5,7 @@ const concat = require('gulp-concat')
 const sourcemaps = require('gulp-sourcemaps')
 
 module.exports = function script() {
-    return gulp.src(['src/js/functions.js', 'src/includes/**/*.js', 'src/js/index.js',])
+    return gulp.src(['src/js/functions.js', 'src/js/animations.js', 'src/js/custom-slider.js', 'src/pug/**/*.js', 'src/js/index.js',])
         .pipe(plumber())
         .pipe(concat('script.js'))
         .pipe(sourcemaps.write())

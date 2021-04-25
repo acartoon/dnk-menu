@@ -1,0 +1,43 @@
+/************ ����� ����� ***************/
+@import "src/style/_";
+
+.certificate {
+    position: relative;
+    display: block;
+    line-height: 0;
+    height: 0;
+    padding-bottom: 75.2%;
+    border-radius: 4px;
+    overflow: hidden;
+
+    @include desktopStyle {
+        border-radius: 4rem;
+    }
+
+    img {
+        @include coverImg;
+    }
+}
+
+
+.slider-video {
+    position: relative;
+    display: block;
+    line-height: 0;
+    height: 0;
+    padding-bottom: 56.25%;
+    border-radius: 4px;
+    overflow: hidden;
+
+    @include desktopStyle {
+        border-radius: 4rem;
+    }
+
+    iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+}

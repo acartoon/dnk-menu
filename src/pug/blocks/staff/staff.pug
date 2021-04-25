@@ -1,0 +1,44 @@
+mixin staff(list)
+    ul.staff.js-staff
+        each val, index in list
+            li._item
+                ._in
+                    p._img
+                        img(src=val.img alt=val.name)
+                    ._info
+                        p._department=val.department
+                        p._name=val.name
+                        p._activity=val.activity
+                ._in
+                    ._wrapper.js-staff-content
+                        if(index == 0)
+                            ._wrap
+                                p.text-heading Телефон
+                                a.staff__link(href="tel:89279059957") +7 927 905 99 57
+                            ._wrap
+                                p.text-heading Офис
+                                a.staff__link(href="tel:88005000163") 8 800 5000 163, доб. 2456
+                            ._wrap
+                                p.text-heading Эл. почта
+                                a.staff__link(href="mailto:m.orekhov@pp-mail.com") m.orekhov@pp-mail.com
+                        else if(index == 1)
+                            ._wrap
+                                p.text-heading Телефон
+                                a.staff__link(href="tel:89279059957") +7 927 905 99 57
+                            ._wrap
+                                p.text-heading Офис
+                                a.staff__link(href="tel:88005000163") 8 800 5000 163, доб. 2456
+                            ._wrap
+                                p.text-heading Эл. почта
+                                a.staff__link(href="mailto:m.orekhov@pp-mail.com") m.orekhovvvvvvv@pp-mail.com
+                        else
+                            ._wrap
+                                p.text-heading Телефон
+                                a.staff__link(href="tel:89279059957") +7 927 905 99 57
+                            ._wrap
+                                p.text-heading Офис
+                                a.staff__link(href="tel:88005000163") 8 800 5000 163, доб. 2456
+                            ._wrap
+                                p.text-heading Эл. почта
+                                a.staff__link(href="mailto:m.orekhov@pp-mail.com") m.orekhov@pp-mail.com
+

@@ -3,85 +3,90 @@
 
 /************ стили сетки ***************/
 
-$grid-breakpoints: (
-    ex: $ex,
-    sm: 480,
-    m: $m,
-    ml: 640,
-    lm: 768,
-    l: 992,
-    xl: 1024,
-);
-
 .d-none {
     display: none;
 }
 
-.d-block {
-    display: block !important;
+.d-dt-block {
+    @include desktopStyle {
+        display: block !important;
+    }
+
+}
+.d-none {
+    display: none;
+}
+
+.d-dt-none {
+    @include desktopStyle {
+        display: none;
+    }
+
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-md-6 {
+    @include desktopStyle {
+        width: 50%;
+    }
+
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 16px;
+
+    @include desktopStyle {
+        padding-left: 80rem;
+        padding-right: 80rem;
+
+    }
+
+    //@media(min-width: 1440px) {
+    //    width: 1440px;
+    //    margin: auto;
+    //}
 }
 
 .row {
     display: flex;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.row-wrap {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: -15px;
-    margin-bottom: -15px;
-}
-
-.order-xl-first {
 
     @include desktopStyle {
-        order: -1;
+        margin: 0;
     }
 }
-.col-12 {
+
+.col-d-2 {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    box-sizing: border-box;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    padding: 0 18px 24px;
+    padding: 0;
 
-}
-
-.col-ml-6 {
-    @media(min-width: 640px) {
-        width: 50%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-bottom: 15px;
-    }
-}
-
-.col-lg-3 {
     @include desktopStyle {
-        width: 33.3333%;
-        padding-right: 15px;
-        padding-left: 15px;
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 24rem;
+        padding: 0;
     }
 }
+.col-d-3 {
+    width: 100%;
+    padding: 0 18px 0;
+    padding: 0;
 
-
-@each $key, $breakpoints in $grid-breakpoints {
-
-    .d-#{$key}-block {
-
-        @include get-adaptive($breakpoints) {
-            display: block;
-        }
-    }
-
-    .d-#{$key}-none {
-
-        @include get-adaptive($breakpoints) {
-            display: none;
-        }
+    @include desktopStyle {
+        box-sizing: border-box;
+        width: 33.333%;
+        padding: 0 24rem;
+        padding: 0 8rem;
     }
 }

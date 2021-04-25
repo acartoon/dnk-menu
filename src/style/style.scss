@@ -1,5 +1,7 @@
 @import "_animations";
 
+@import "_mixins";
+
 @import "_base";
 
 @import "_fonts";
@@ -7,3 +9,9 @@
 @import "_grid";
 
 @import "_typog";
+
+@import "_dark-page-head.scss";
+
+@import "_catalog-content.scss";
+
+@import "_pin.scss";

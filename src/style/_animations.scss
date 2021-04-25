@@ -1,0 +1,30 @@
+
+.js-soa {
+    opacity: 0;
+    will-change: transform,opacity;
+    transition-property: opacity,-webkit-transform;
+    transition-property: transform,opacity;
+    transition-property: transform,opacity,-webkit-transform;
+    transition-duration: .6s;
+    transition-timing-function: cubic-bezier(.26,.86,.44,.985);
+    transition-duration: .6s;
+    transition-delay: 60ms;
+}
+
+#jarallax-container-0 > div {
+    top: 0;
+    bottom: 0;
+    max-height: 100% !important;
+}
+
+
+
+.a-subtitle {
+    opacity: 0;
+    animation: subtitle 900ms ease-in-out 300ms forwards;
+}
+
+@keyframes subtitle {
+    from {opacity: 0}
+    to {opacity: 1}
+}

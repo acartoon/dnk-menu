@@ -1,144 +1,68 @@
 -
-    var userMenu = [
-        {
-            title: 'Личный кабинет',
-            icon: 'user.png',
-            class: 'user',
-        },
-
-        {
-            title: 'Корзина',
-            icon: 'basket.png',
-            class: 'user',
-        },
-
-    ]
-
--
-    var dropdown = [
-        {
-            title: 'Верхняя одежда',
-            link: '',
-        },
-        {
-            title: 'Свитшоты/толстовки',
-            link: '',
-        },
-        {
-            title: 'Футбы/боди',
-            link: '',
-        },
-        {
-            title: 'Штаны',
-            link: '',
-        },
-        {
-            title: 'Комбезы/костюмы',
-            link: '',
-        },
-        {
-            title: 'Слипы',
-            link: '',
-        },
-
+    var mainMenu = [
+        {title: 'Медиа', link: '/', isChecked: false},
+        {title: 'Контакты', link: '/', isChecked: false},
+        {title: 'О нас', link: '/', isChecked: false},
     ]
 -
-    var dropdown2 = [
-        {
-            title: 'Боди/Володазки',
-            link: '',
-        },
-        {
-            title: 'Свитшоты/толстовки',
-            link: '',
-        },
-        {
-            title: 'Футбы/боди',
-            link: '',
-        },
-        {
-            title: 'Платья',
-            link: '',
-        },
-        {
-            title: 'Аксессуары',
-            link: '',
-        },
-        {
-            title: 'Слипы',
-            link: '',
-        },
-
-    ]
--
-    var mainNav = [
-        {
-            title: 'NEW',
-            link: '',
-            dropdown: false,
-        },
-        {
-            title: 'DNK DESIGN',
-            link: '',
-            dropdown: false,
-        },
-        {
-            title: 'Малыши (92-68)',
-            link: '',
-            dropdown: dropdown,
-            open: false,
-        },
-        {
-            title: 'Дети (98-122)',
-            link: '',
-            dropdown: dropdown2,
-        },
-        {
-            title: 'Подростки (134-170)',
-            link: '',
-            dropdown: dropdown,
-        },
-        {
-            title: 'Женщины',
-            link: '',
-            dropdown: dropdown2,
-        },
-        {
-            title: 'Мужчины',
-            link: '',
-            dropdown: dropdown,
-        },
-        {
-            title: 'Аксессуары',
-            link: '',
-            dropdown: dropdown2,
-        },
-        {
-            title: 'DNk маркет',
-            link: '',
-            dropdown: dropdown,
-        },
-        // {
-        //     title: 'Last Size',
-        //     link: '',
-        //     dropdown: dropdown,
-        // },
+    var makerMenu = [
+        {title: 'merlo', link: '/', isChecked: false, img: 'merlo'},
+        {title: 'pistenbully', link: '/', isChecked: false, img: 'pistenbully'},
+        {title: 'fae', link: '/', isChecked: false, img: 'fae'},
+        {title: 'reform', link: '/', isChecked: false, img: 'reform'},
     ]
 
 
 -
-    var submenu = [
-        {
-            title: 'Доставка',
-            link: '',
-        },
+    var catalogDropdown = [
+        {title: 'Каталог пункт1', link: '/'},
+        {title: 'Каталог пункт2', link: '/'},
+        {title: 'Каталог пункт3', link: '/'},
+        {title: 'Каталог пункт4', link: '/'},
+        {title: 'Каталог пункт5', link: '/'},
 
+    ]
+
+-
+    var catalogNav = [
+        {title: 'Каталог', dropdown: catalogDropdown, link: '/'},
+        {title: 'Сервис', dropdown: false, link: '/'},
+        {title: 'Запчасти', dropdown: false, link: '/'},
+        {title: 'Спецпредложения', dropdown: false, link: '/'},
+        {title: 'Новости', dropdown: false, link: '/'},
+    ]
+
+- var adress = 'i/index/catalog-list/';
+
+-
+    var dropdownList = [
         {
-            title: 'Контакты',
-            link: '',
+            img: adress + '1.png',
+            title: 'Телескопические погрузчики',
+            list: ['Камнедробилки', 'Стабилизаторы грунта', 'Универсальные машины']
         },
         {
-            title: 'Эко',
-            link: '',
+            img: adress + '2.png',
+            title: 'Транспортеры cingo',
+        },
+        {
+            img: adress + '3.png',
+            title: 'самоходные бетоносмесители dbm',
+        },
+        {
+            img: adress + '4.png',
+            title: 'Навесное оборудование',
+        },
+        {
+            img: adress + '5.png',
+            title: 'Экскаваторы Boki',
+        },
+        {
+            img: adress + '6.png',
+            title: 'Навесное оборудование',
+        },
+        {
+            img: adress + '7.png',
+            title: 'muli / muli new',
         },
     ]

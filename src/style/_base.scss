@@ -1,11 +1,59 @@
 /************ базовые стили ***************/
 @import "_";
 
+html {
+    @include desktopStyle {
+        font-size: calc(100vw / 1440);
+    }
+
+    //@media(min-width: 1440px) {
+    //    font-size: 1px;
+    //}
+}
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
-    font-family: $fontRoboto;
+    color: color(gray1);
+
+    @include desktopStyle {
+        font-size: 16rem;
+    }
+}
+
+main {
+    position: relative;
+    padding-top: 65rem;
+
+    @include desktopStyle {
+        padding-top: 81rem;
+
+        body.header-full &:not(.catalog) {
+            padding-top: 130rem;
+        }
+    }
+
+    &.catalog {
+        padding-top: 0;
+    }
+
+
+    &.index {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            background: url("i/noise_.png"), #0A0B0A;
+            z-index: -2;
+        }
+    }
 }
 
 .overflow {
@@ -25,17 +73,4 @@ body {
     margin: -1px !important;
     padding: 0 !important;
     clip: rect(0 0 0 0) !important;
-}
-
-.container {
-    max-width: 1150px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 20px;
-    padding-left: 20px;
-
-    @media (min-width: 480px) {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
 }

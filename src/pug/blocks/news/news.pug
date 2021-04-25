@@ -1,0 +1,23 @@
+
+mixin news(params)
+    .news.dark
+        ._list
+            +newsList(params.list)(class=params.newsClass)
+
+        if(params.list.length == 1)
+            ._empty-wrap
+                ._empty
+                    p._img
+                        img(src="i/logo-2.svg" alt='Скоро здесь будут новости')
+                    p._title Скоро здесь будет больше новостей
+                    p._subtitle Обещаем :)
+        else
+            ._button.d-dt-none
+                +_defaultButton({
+                    text: 'Читать все новости',
+                    data_type: 'default',
+                    theme: 'theme',
+                    icon: false,
+                    tag: 'a'
+                })
+

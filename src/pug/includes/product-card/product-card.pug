@@ -1,0 +1,99 @@
+include data
+include top
+include threeColumn
+include threeColumn2
+include descriptions
+
+mixin productCard
+    .product-card
+        ._top
+            +productTop
+        section.page__section
+            .container
+                h2.hidden слайдер товара
+                .product-card__slider
+                    +productSlider(sliderProductCard)
+                .product-card__separatop
+                    h3.product-card__h3 Дополнительная информация
+                    .separator.light
+                .product-card__docs
+                    +docs([
+                        {name: 'Технические характеристики', size: '11.4 KB'},
+                        {name: 'Буклет PistenBully 600', size: '8.7 MB'},
+                        {name: 'линейка PistenBully nordic', size: '14.2 MB'},
+                    ])
+        section.page__section.dark
+            .container.js-animate
+                .product-card__title-wrap
+                    +titleBlock({
+                        align: 'left',
+                        theme: 'light',
+                        title: ['технические', 'indent', 'характеристики'],
+                    })
+                .js-soa.is-scroll-invisible
+                    .catalog-content
+                        +table(dataTableCard1)
+        section.page__section
+            .container
+                .product-card__section.js-animate
+                    .product-card__title-wrap
+                        +titleBlock({
+                            align: 'left',
+                            theme: 'light',
+                            title: ['бестселлер на все   ',  'времена'],
+                        })
+                    .js-soa.is-scroll-invisible
+                        +threeColumn
+                .product-card__section.js-animate
+                    .product-card__title-wrap
+                        +titleBlock({
+                            align: 'left',
+                            theme: 'light',
+                            title: ['Кабина ','водителя'],
+                        })
+                    .js-soa.is-scroll-invisible
+                        +threeColumn2
+                .product-card__section.js-animate
+                    .product-card__title-wrap
+                        +titleBlock({
+                            align: 'left',
+                            theme: 'light',
+                            title: ['Описание'],
+                        })
+                    .js-soa.is-scroll-invisible
+                        +description
+        section.page__section.black.page__separator
+            .container.js-animate
+                .product-card__title-wrap
+                    +titleBlock({
+                        align: 'left',
+                        theme: 'dark',
+                        title: ['галерея'],
+                    })
+                .js-soa.is-scroll-invisible
+                    +gallerySlider({list: productCardGallery, params: {isNeedBtn: false, isNeedBullet: true}})
+        section.page__section.black
+            .container.js-animate
+                .product-card__title-wrap
+                    +titleBlock({
+                        align: 'left',
+                        theme: 'dark',
+                        title: ['Видео'],
+                    })
+                .js-soa.is-scroll-invisible
+                    //+videoSlider({list: productCardVideo, params: {isNeedBtn: false, isNeedBullet: true}})
+
+        section.page__section
+            .container.js-animate
+                .product-card__title-wrap
+                    +titleBlock({
+                        align: 'left',
+                        theme: 'light',
+                        title: ['Навесное', 'indent', 'оборудование'],
+                    })
+                .js-soa.is-scroll-invisible
+                    +sliderOptionally({list: testList, needTitle: true, cardClass: 'optionally'})
+        section._content.page__section
+            .container.js-animate
+                +staffBlock
+

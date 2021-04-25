@@ -1,0 +1,56 @@
+mixin certificateSlider(params)
+    .slider.custom-slider.js-custom-slider(class=params.theme ? 'dark' : '')
+        if(params.params.isNeedBtn)
+            .slider-controls.custom-slider__controls
+                button(type=button).custom-slider__prev назад
+                button(type=button).custom-slider__next вперед
+        .custom-slider__slider-track
+            each val in params.list
+                .slider__item
+                    a(href="#").certificate
+                        img(src=val.img alt="сертификат")
+        if(params.params.isNeedBullet)
+            ul.custom-slider__bullet-list
+
+mixin gallerySlider(params)
+    .slider.custom-slider.js-custom-slider(class=params.theme ? 'dark' : '')
+        if(params.params.isNeedBtn)
+            .slider-controls.custom-slider__controls
+                button(type=button).custom-slider__prev назад
+                button(type=button).custom-slider__next вперед
+        .custom-slider__slider-track
+            each val in params.list
+                .slider__item
+                    a(href="#").gallery.js-full-size-gallery
+                        img(src=val.img alt="изображение галлереи")
+        if(params.params.isNeedBullet)
+            ul.custom-slider__bullet-list
+
+
+mixin _videoSlider(params)
+    .slider.custom-slider.js-custom-slider(class=params.theme ? 'dark' : '')
+        if(params.params.isNeedBtn)
+            .slider-controls.custom-slider__controls
+                button(type=button).custom-slider__prev назад
+                button(type=button).custom-slider__next вперед
+        .custom-slider__slider-track
+            each val in params.list
+                .slider__item
+                    .slider-video
+                        iframe(width='100%' height='100%' src='https://www.youtube.com/embed/' + val.videoId + '?enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                        //iframe(width='100%' height='100%' src='https://www.youtube.com/embed/LIdpOLUHXPY' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+        if(params.params.isNeedBullet)
+            ul.custom-slider__bullet-list
+
+
+mixin videoSlider(params)
+    .slider-video.js-slider-video
+        .swiper-container
+            .swiper-wrapper
+                each val in params.list
+                    .slider__item.swiper-slide
+                        .slider-video
+                            iframe(width='100%' height='100%' src='https://www.youtube.com/embed/' + val.videoId + '?enablejsapi=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                            //iframe(width='100%' height='100%' src='https://www.youtube.com/embed/LIdpOLUHXPY' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+

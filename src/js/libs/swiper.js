@@ -1,6 +1,6 @@
 /**
  * Swiper 6.4.11
- * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * Most modern mobile touch certificate-certificateSlider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
  * Copyright 2014-2021 Vladimir Kharlampidi
@@ -5773,9 +5773,9 @@
                 recentWheelEvents.push(newEvent); // If there is at least one previous recorded event:
                 //   If direction has changed or
                 //   if the scroll is quicker than the previous one:
-                //     Animate the slider.
+                //     Animate the certificate-certificateSlider.
                 // Else (this is the first time the wheel is moved):
-                //     Animate the slider.
+                //     Animate the certificate-certificateSlider.
 
                 if (prevEvent) {
                     if (newEvent.direction !== prevEvent.direction || newEvent.delta > prevEvent.delta || newEvent.time > prevEvent.time + 150) {
@@ -5913,7 +5913,7 @@
                 // Prevent if time between scrolls is below configured threshold
                 return false;
             } // If the movement is NOT big enough and
-            // if the last time the user scrolled was too close to the current one (avoid continuously triggering the slider):
+            // if the last time the user scrolled was too close to the current one (avoid continuously triggering the certificate-certificateSlider):
             //   Don't go any further (avoid insignificant scroll movement).
 
 
@@ -5921,15 +5921,15 @@
                 // Return false as a default
                 return true;
             } // If user is scrolling towards the end:
-            //   If the slider hasn't hit the latest slide or
-            //   if the slider is a loop and
-            //   if the slider isn't moving right now:
+            //   If the certificate-certificateSlider hasn't hit the latest slide or
+            //   if the certificate-certificateSlider is a loop and
+            //   if the certificate-certificateSlider isn't moving right now:
             //     Go to next slide and
             //     emit a scroll event.
             // Else (the user is scrolling towards the beginning) and
-            // if the slider hasn't hit the first slide or
-            // if the slider is a loop and
-            // if the slider isn't moving right now:
+            // if the certificate-certificateSlider hasn't hit the first slide or
+            // if the certificate-certificateSlider is a loop and
+            // if the certificate-certificateSlider isn't moving right now:
             //   Go to prev slide and
             //   emit a scroll event.
 

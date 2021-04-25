@@ -1,0 +1,46 @@
+/************ шапка ***************/
+@import "src/style/_";
+
+
+.bullet-list {
+    display: flex;
+    justify-content: center;
+    @include baseListStyle();
+    margin: 0 -4px;
+    align-items: center;
+
+    @include desktopStyle {
+        margin: 0 -4rem;
+    }
+
+    &__item {
+        display: block;
+        margin: 0 4px;
+        width: 6px;
+        height: 6px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 2px solid color(gray3);
+        transition: width 200ms ease-in-out, height 200ms ease-in-out, border-color 200ms ease-in-out;
+        flex: 0 0 auto;
+
+        @include desktopStyle {
+            width: 6rem;
+            height: 6rem;
+            margin: 0 4rem;
+        }
+
+        &.active {
+            width: 8px;
+            height: 8px;
+            border-color: color(goldLight);
+            transition: width 200ms ease-in-out, height 200ms ease-in-out, border-color 200ms ease-in-out;
+
+            @include desktopStyle {
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+    }
+
+}

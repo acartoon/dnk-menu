@@ -1,3 +1,12 @@
+$sansRegular: 'sans-regular';
+$sansSemibold: 'sans-semibold';
+$sansBold: 'sans-bold';
+
+$oswaldRegular: 'oswald-regular';
+$oswaldMedium: 'oswald-medium';
+$oswaldSemibold: 'oswald-semibold';
+$oswaldBold: 'oswald-bold';
+
 $ex: 0;
 $sm: 480px;
 $m: 560;
@@ -8,29 +17,20 @@ $xl: 1024px;
 
 $colors: (
     footer: #333333,
-    blue: #0ABAEE,
-    green: #5CD384,
-    white: #ffffff,
-    black: #000000,
-    grey: #ECECEC,
-    gray98: #FAFAFA,
-    gray92: #EBEBEB,
-    light_grey: #F8F8FA,
-    dark_grey: #696969,
-    placeholder: #808080,
-    disclaimer: #989898,
-    error: #e94e1d,
-    error2: #EC0000,
-    bg:#F6F6F6,
-    gainsboro: #D8D8D8,
-    blue2: #009EE3,
-    yellow: #C5C5C5,
+    goldLight: #C0A968,
+    goldDark: #745F39,
+    darkGray: #212322,
+    gray5: #303336,
+    gray4: #53565A,
+    gray3: #888B8D,
+    gray2: #BBBBBB,
+    gray1: #D9D9D6,
+    dark: #5F5E58,
+    fillDark: rgba(0, 0, 0, 0.88),
+    fillGoldenDimmed: rgba(12, 10, 9, 0.8),
+    green: #01A346,
+    reform: #D44627,
+    fae: #E28530,
+    pistenbully:  #DA3828,
+    merlo: #01A346,
 );
-
-$fontRoboto: "Roboto", "Arial", sans-serif;
-
-$mobMenu: 560px;
-$desktop: 1024px;
-$preheaderPoint: 768px;
-
-$speed: 300ms;

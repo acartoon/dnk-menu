@@ -1,0 +1,49 @@
+include data
+- var theme = 'dark';
+
+mixin indexPistenbully
+    .container
+        .index__header
+            +pageContentHeader(names.PISTENBULLY, subtitle)
+
+        .index__section.js-animate
+            .js-soa.is-scroll-invisible
+                +catalogPart({
+                    titleName: names.PISTENBULLY,
+                    list: listPistenbully,
+                    catalogPartText: catalogPartText})
+
+        .index__section.js-animate
+            +sectionHeader({
+                    title: ['Сертификаты'],
+                    subtitle: 'Являемся официальным дилером Merlo в Самарской и ульяновской областях',
+                    theme: theme
+                })(class="text-align-center")
+            .index__slider.js-soa.is-scroll-invisible
+                +certificateSlider({list: sliderCertificates, params: {isNeedBtn: false, isNeedBullet: true}})
+
+        .index__section.js-animate
+            +sectionHeader({
+                title: titleGeography,
+                subtitle: 'Работаем на территории России, Беларуси, Казахстана, Таджикистана, Узбекистана и Кыргызстана',
+                theme: theme
+            })(class="text-align-center")
+            .js-soa.is-scroll-invisible
+                +geography(names.PISTENBULLY)
+
+        .index__section.js-animate
+            +sectionHeader({title: titleClients, subtitle: subtitleClients, theme: theme})(class="text-align-center")
+            .js-soa.is-scroll-invisible
+                +clients
+
+        .index__section.js-animate
+            +sectionHeader({title: titleNews, theme: theme})
+            .js-soa.is-scroll-invisible
+                +news({list: newsListIndexPISTENBULLY, newsClass: "column"})
+
+        .index__section
+            .index__in.js-animate
+                +about
+            .js-animate
+                +insta(instaList)(class="js-soa is-scroll-invisible")
+

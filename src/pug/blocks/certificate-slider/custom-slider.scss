@@ -1,0 +1,92 @@
+/************ ����� ����� ***************/
+@import "src/style/_";
+
+.custom-slider {
+    padding: 0 16px;
+
+    @include desktopStyle {
+        padding: 0 80rem;
+    }
+
+    &__slider-track {
+        display: flex;
+        margin: 0 -4px;
+    }
+
+    &__bullet-list {
+        display: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @include desktopStyle {
+            display: flex;
+            margin-top: 20rem;
+        }
+    }
+
+    &__bullet-item {
+        @include getFont($oswaldRegular, 16, true, rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+        width: 40rem;
+        height: 40rem;
+        cursor: pointer;
+        flex: 0 0 auto;
+        box-sizing: border-box;
+        color: color(gray1);
+        border-radius: 50%;
+        border: 2rem solid transparent;
+        transition: color 200ms ease-in, border-color 000ms ease-in-out;
+
+        .slider.dark & {
+            color: color(gray4);
+        }
+
+        &.active {
+            transition: color 200ms ease-in, border-color 000ms ease-in-out;
+            border-color: color(goldLight);
+            color: color(goldLight);
+
+            .slider.dark & {
+                border-color: color(goldDark);
+                color: color(goldDark);
+            }
+        }
+    }
+}
+
+.slider {
+    overflow: hidden;
+    margin: 0 -16px;
+
+
+    @include desktopStyle {
+        margin: 0 -80rem;
+    }
+
+    &__item {
+        width: 73.9%;
+        width: 75.6%;
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        padding: 0 4px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @media(min-width: 768px) {
+            width: 41.64%;
+            width: 42%;
+        }
+    }
+}
+
+.js-slider-video {
+    .slider__item {
+        width: 75%;
+    }
+}

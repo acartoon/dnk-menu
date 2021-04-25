@@ -1,0 +1,137 @@
+/************ шапка сайта ***************/
+@import "src/style/_";
+
+.marker-nav-switch {
+    @include baseBtnStyle($padding: 21px 20px 21px 16px);
+    @include getFont($oswaldRegular, 16, true);
+    @include baseTransitionStyle(color);
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+
+    &__title {
+        line-height: 0;
+    }
+
+    path, svg {
+        max-width: 100%;
+        max-height: 100%;
+        @include baseTransitionStyle(fill);
+    }
+
+
+    &.merlo svg {
+
+        @include desktopStyle {
+            width: 90rem;
+            height: 20rem;
+        }
+    }
+
+    &.pistenbully svg {
+
+        @include desktopStyle {
+            width: 101rem;
+            height: 26rem;
+        }
+    }
+
+    &.reform svg {
+
+        @include desktopStyle {
+            width: 101rem;
+            height: 16rem;
+        }
+    }
+
+    &.fae {
+        @include desktopStyle {
+            padding-top: 20rem;
+            padding-bottom: 20rem;
+        }
+
+        svg {
+            @include desktopStyle {
+                width: 37rem;
+                height: 40rem;
+            }
+        }
+
+
+    }
+
+    @include desktopStyle {
+        @include getFont($oswaldRegular, 18, true, rem);
+        padding: 27.5rem 16rem;
+
+    }
+
+    &.open {
+        color: color(goldLight);
+        @include baseTransitionStyle(color);
+
+        path {
+            fill: color(goldLight);
+            @include baseTransitionStyle(fill);
+        }
+    }
+
+    &:hover {
+        path, svg {
+            fill: color(goldLight);
+            @include baseTransitionStyle(fill);
+        }
+
+        @include desktopStyle {
+            color: color(goldLight);
+            @include baseTransitionStyle(color);
+        }
+    }
+
+    &__icon {
+        display: inline-flex;
+        margin-left: 4px;
+        width: 16px;
+        height: 16px;
+
+        path {
+            fill: color(gray1);
+            @include baseTransitionStyle(fill);
+        }
+
+        @include baseTransitionStyle(transform);
+
+        .marker-nav-switch.open & {
+            transform: rotate(45deg);
+            @include baseTransitionStyle(transform);
+
+            path {
+                fill: color(goldLight);
+                @include baseTransitionStyle(fill);
+            }
+
+        }
+
+
+        @include desktopStyle {
+            width: 16rem;
+            height: 16rem;
+            max-width: 16rem;
+            max-height: 16rem;
+
+            .marker-nav-switch:hover & {
+                //transform: rotate(45deg);
+                //@include baseTransitionStyle(transform);
+
+                path {
+                    fill: color(goldLight);
+                    @include baseTransitionStyle(fill);
+                }
+
+            }
+        }
+
+    }
+
+}
